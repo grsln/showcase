@@ -1,0 +1,101 @@
+.main {
+  overflow: hidden;
+  background: #3c3c3c;
+  flex: 0 0 auto;
+}
+.footer {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 16px 20px 20px;
+  max-width: 1000px;
+  min-height: 43px;
+  display: flex;
+}
+.legal {
+  &:first-child {
+    position: relative;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    line-height: 0.5em;
+    line-height: 1em;
+    margin: 4px 0;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .social {
+      color: #3c3c3b;
+      font-weight: 300;
+      font-size: 17.5px;
+      line-height: 22px;
+
+      height: 29px;
+      overflow: hidden;
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 60px auto;
+      text-align: center;
+    }
+  }
+}
+
+.socialItem {
+  display: inline-block;
+  margin: 0 2px;
+}
+.socialLink {
+  display: block;
+  width: 29px;
+  height: 29px;
+  background: url("./assets/social_links.svg") no-repeat 0 0;
+  background-position-x: 0px;
+  background-position-y: 0px;
+  text-indent: -9999px;
+  color: #00c1ff;
+  text-decoration: none;
+}
+.twitter {
+  background-position: 0 0;
+}
+.vkontakte {
+  background-position: -37px 0;
+}
+.facebook {
+  background-position: -74px 0;
+}
+.instagram {
+  background-position: -110px 0;
+}
+@media screen and (min-width: 48em) {
+  .footer {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .legal {
+    float: left;
+    margin-bottom: 0;
+    width: 33.3333%;
+    &:first-child {
+      top: 0;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  .social {
+    font-weight: 300;
+    font-size: 17.5px;
+    line-height: 22px;
+    float: left;
+    top: 2px;
+    margin: 0px auto;
+    width: 30.3333%;
+  }
+}

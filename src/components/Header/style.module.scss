@@ -1,0 +1,83 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+}
+.withoutArrow::after {
+  display: none !important;
+}
+.buttonsWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: auto;
+  :nth-child(n) {
+    display: block;
+    width: 7rem;
+    margin: 0.5rem;
+  }
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 80%;
+}
+.logo {
+  width: 282px;
+}
+.burger {
+  top: 1rem;
+  left: 1rem;
+}
+.logoWrap{
+  align-self: flex-start;
+}
+@media screen and (min-width: 460px) and (max-width: 899.98px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .logoWrap {
+    align-self: center;
+  }
+  .buttonsWrap {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    :nth-child(n) {
+      display: block;
+      flex: 1 1 auto;
+      margin: 0.5rem;
+    }
+  }
+  .logo {
+    width: 282px;
+  }
+}
+@media screen and (max-width: 459.98px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .buttonsWrap {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    :nth-child(n) {
+      display: block;
+      width: auto;
+      margin: 0.5rem;
+    }
+  }
+  .logo {
+    width: 50vw;
+  }
+  .logoWrap {
+    align-self: flex-end;
+  }
+}
