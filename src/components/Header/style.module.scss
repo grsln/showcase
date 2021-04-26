@@ -4,6 +4,10 @@
   width: 100%;
   background: #fff;
   box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 .withoutArrow::after {
   display: none !important;
@@ -31,11 +35,18 @@
 .burger {
   top: 1rem;
   left: 1rem;
+  z-index: 20;
 }
-.logoWrap{
+.menu {
+  position: static;
+}
+.logoWrap {
   align-self: flex-start;
 }
 @media screen and (min-width: 460px) and (max-width: 899.98px) {
+  .main {
+    position: static;
+  }
   .navbar {
     flex-direction: column;
   }
@@ -57,8 +68,21 @@
   .logo {
     width: 282px;
   }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0rem;
+    left: 0rem;
+    padding: 4rem 2rem;
+    background-color: rgba(#00c1ff, 0.8);
+    z-index: 10;
+  }
 }
 @media screen and (max-width: 459.98px) {
+  .main {
+    position: static;
+  }
   .navbar {
     flex-direction: column;
   }
@@ -79,5 +103,15 @@
   }
   .logoWrap {
     align-self: flex-end;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0rem;
+    left: 0rem;
+    padding: 4rem 2rem;
+    background-color: rgba(#00c1ff, 0.8);
+    z-index: 10;
   }
 }
